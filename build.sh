@@ -45,5 +45,3 @@ sed -i -r 's/((1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])\.){3}(1?[0-9][0-9]?|2[0-4][0-9
 
 #build image
 docker build -t arthurkay/sagittarius-a .
-#clean up
-rm -rf ./download
