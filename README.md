@@ -4,6 +4,7 @@ Zero-conf docker application that functions as a DNS black hole. Only 6MB in bin
 
 ## Building
 `docker build -t arthurkay/sagittarius-a .`
+
 `docker run -p 53:53/tcp -p 53:53/udp --cap-add=NET_ADMIN arthurkay/sagittarius-a`
 
 To add a hosts file to the list, create a line in Dockerfile similar to ADD SOMEADDRESS /etc/badhosts/SOMENAME
