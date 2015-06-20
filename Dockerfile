@@ -5,4 +5,4 @@ RUN mkdir /etc/badhosts
 ADD ./dnsmasq.conf /etc/dnsmasq.conf
 ADD ./download/* /etc/badhosts/
 RUN chmod 444 /etc/badhosts/*
-CMD ["dnsmasq", "--log-facility=/var/log/dnsmasq.log"]
+CMD ["dnsmasq"]
