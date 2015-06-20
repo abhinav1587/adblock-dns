@@ -1,3 +1,4 @@
 FROM alpine:3.2
 RUN apk -U add dnsmasq
-ENTRYPOINT ["dnsmasq", "-k"]
+RUN wget https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts -O badhosts
+ENTRYPOINT ["dnsmasq", "-k", "-H badhosts"]
