@@ -1,4 +1,8 @@
-FROM alpine:3.2
+FROM alpine:latest
+MAINTAINER ArthurKay
 RUN apk -U add dnsmasq
-RUN wget https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts -O badhosts
-ENTRYPOINT ["dnsmasq", "-k", "-H badhosts"]
+RUN mkdir /etc/badhosts
+ADD https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts /etc/badhosts/StevenBlack
+ADD ./dnsmasq.conf /etc/dnsmasq.conf
+RUN chmod 444 /etc/badhosts/*
+CMD ["dnsmasq", "-k"]
