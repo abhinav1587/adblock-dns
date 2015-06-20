@@ -1,6 +1,6 @@
-# docker-dnsmasq
+# sagittarius-a
 
-It's a [dnsmasq][dnsmasq] Docker image. It is only 6 MB in size. It is just an `ENTRYPOINT` to the `dnsmasq` binary. Can you smell what the rock is cookin'?
+Zero-conf docker application that functions as a DNS black hole. Only 6MB in binary size. Based on the excellent image maintained by andyshinn. It is an `ENTRYPOINT` to the `dnsmasq` binary, plus some extra mojo to build a list of hosts to "accidentally" mis-resolve. Using Steven Black's list (hard set) for testing, and trusting its addresses. Final version will work without trust, using arbitrary lists of domains to block or redirect (for logging).
 
 ## Usage
 
