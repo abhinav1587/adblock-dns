@@ -41,7 +41,7 @@ wget -P download http://hosts-file.net/psh.txt
 
 #file processing, we don't trust http or hosts-file.net
 dos2unix ./download/*
-sed -i -r 's/((1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])\.){3}(1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])/'"$HOLE\t"'/' ./download/*
+sed -i -r 's/((1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])\.){3}(1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])/'"$HOLE"'/' ./download/*
 
 #build image
 sudo docker build -t arthurkay/sagittarius-a .
