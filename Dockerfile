@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine
 MAINTAINER ArthurKay
 RUN apk -U add dnsmasq
 RUN mkdir /etc/badhosts
